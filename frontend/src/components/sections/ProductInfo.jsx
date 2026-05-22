@@ -15,13 +15,14 @@ function ProductInfo({ product }) {
       </p>
 
       <div className="flex gap-2 mt-4">
-        {product.colors.map((color, index) => (
+        {product.colors.map((colorImage, index) => (
           <button
             key={index}
-            className="w-12 h-12 rounded-md border border-border"
-            style={{ backgroundColor: color }}
-            aria-label={`Cor ${index + 1}`}
-          />
+            className="w-12 h-12 rounded-md overflow-hidden bg-surface-alt border border-border"
+            aria-label={`Variação ${index + 1}`}
+          >
+            <img src={colorImage} alt="" className="w-full h-full object-cover" />
+          </button>
         ))}
       </div>
 

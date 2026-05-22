@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ProductGallery from '../components/sections/ProductGallery'
 import ProductInfo from '../components/sections/ProductInfo'
+import RelatedProducts from '../components/sections/RelatedProducts'
 import { getProductById } from '../services/api'
 
 function ProductPage() {
@@ -23,12 +24,15 @@ function ProductPage() {
   if (!product) return null
 
   return (
-    <section className="px-11 py-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <ProductGallery images={product.images} name={product.name} />
-        <ProductInfo product={product} />
-      </div>
-    </section>
+    <>
+      <section className="px-11 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <ProductGallery images={product.images} name={product.name} />
+          <ProductInfo product={product} />
+        </div>
+      </section>
+      <RelatedProducts excludeId={product.id} />
+    </>
   )
 }
 
