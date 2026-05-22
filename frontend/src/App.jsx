@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import BagPage from './pages/BagPage'
 import CheckoutIdentificationPage from './pages/CheckoutIdentificationPage'
+import CheckoutPaymentPage from './pages/CheckoutPaymentPage'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/bag" element={<BagPage />} />
             <Route path="/checkout/identification" element={<CheckoutIdentificationPage />} />
+            <Route path="/checkout/payment" element={<CheckoutPaymentPage />} />
           </Routes>
         </main>
         <Footer />
