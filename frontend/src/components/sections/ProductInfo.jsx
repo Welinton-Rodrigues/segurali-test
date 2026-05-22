@@ -1,10 +1,31 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Minus, Plus } from 'lucide-react'
 import Button from '../ui/Button'
+import { useCart } from '../../context/CartContext'
 
 function ProductInfo({ product }) {
   const [selectedSize, setSelectedSize] = useState(null)
   const [quantity, setQuantity] = useState(1)
+  const { addToCart, openBag } = useCart()
+  const navigate = useNavigate()
+
+  function addProductToCart() {
+    const size = selectedSize || 'M'
+    for (let i = 0; i < quantity; i++) {
+      addToCart(product, size)
+    }
+  }
+
+  function handleAddToCart() {
+    addProductToCart()
+    openBag()
+  }
+
+  function handleBuyNow() {
+    addProductToCart()
+    navigate('/bag')
+  }
 
   return (
     <div>
@@ -63,8 +84,8 @@ function ProductInfo({ product }) {
       </div>
 
       <div className="flex gap-3 mt-6">
-        <Button variant="outline">Adicionar à sacola</Button>
-        <Button variant="primary">Comprar agora</Button>
+        <Button variant="outline" onClick={handleAddToCart}>Adicionar à sacola</Button>
+        <Button variant="primary" onClick={handleBuyNow}>Comprar agora</Button>
       </div>
 
       <p className="text-sm text-text-secondary leading-relaxed mt-5">
