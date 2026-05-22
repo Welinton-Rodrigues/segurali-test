@@ -1,8 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
+
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <h1 className="text-3xl font-bold text-gray-900">BEWEAR</h1>
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-surface flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<div className="p-8 text-center text-text-secondary">Home — em breve</div>} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 
