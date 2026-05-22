@@ -19,6 +19,3 @@ npm-debug.log*
 # Environment
 *.local
 .env
-
-# Project notes
-CLAUDE.md
