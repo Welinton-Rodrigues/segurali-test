@@ -13,7 +13,7 @@ const orders = [
         size: 'M',
         quantity: 1,
         price: 749,
-        image: '/images/product1.png',
+        image: '/images/product2.png',
       },
       {
         productId: 4,
@@ -23,7 +23,7 @@ const orders = [
         size: 'M',
         quantity: 1,
         price: 490,
-        image: '/images/product4.png',
+        image: '/images/product2.png',
       },
     ],
     subtotal: 1239,
