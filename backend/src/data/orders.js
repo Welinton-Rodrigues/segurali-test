@@ -1,0 +1,58 @@
+const orders = [
+  {
+    id: '001',
+    status: 'Pago',
+    date: '02/01/23',
+    payment: 'Cartão',
+    items: [
+      {
+        productId: 1,
+        name: 'Nike Tech',
+        category: "Men's Fleece Shacket",
+        color: 'Grafite',
+        size: 'M',
+        quantity: 1,
+        price: 749,
+        image: '/images/product-1.jpg',
+      },
+      {
+        productId: 4,
+        name: 'Nike Tech',
+        category: "Men's Fleece Shacket",
+        color: 'Grafite',
+        size: 'M',
+        quantity: 1,
+        price: 490,
+        image: '/images/product-4.jpg',
+      },
+    ],
+    subtotal: 1239,
+    shipping: 'Grátis',
+    tax: null,
+    total: 1239,
+  },
+  {
+    id: '002',
+    status: 'Pago',
+    date: '02/01/23',
+    payment: 'Cartão',
+    items: [],
+    subtotal: 0,
+    shipping: 'Grátis',
+    tax: null,
+    total: 0,
+  },
+  {
+    id: '003',
+    status: 'Pago',
+    date: '02/01/23',
+    payment: 'Cartão',
+    items: [],
+    subtotal: 0,
+    shipping: 'Grátis',
+    tax: null,
+    total: 0,
+  },
+]
+
+module.exports = orders
