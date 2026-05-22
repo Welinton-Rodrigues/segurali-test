@@ -7,8 +7,8 @@ function OrderRow({ order }) {
 
   return (
     <div className="border border-border rounded-lg p-6">
-      <div className="flex items-center justify-between">
-        <div className="grid grid-cols-4 gap-6 flex-1">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 flex-1">
           <div>
             <p className="text-xs text-text-secondary">Número do Pedido</p>
             <p className="text-sm font-semibold text-text-primary">#{order.id}</p>
@@ -29,7 +29,7 @@ function OrderRow({ order }) {
 
         <button
           onClick={() => setExpanded(e => !e)}
-          className="flex items-center gap-1 text-sm text-primary shrink-0"
+          className="flex items-center gap-1 text-sm text-primary shrink-0 self-start md:self-auto"
         >
           Detalhes do Pedido
           {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}

@@ -15,9 +15,9 @@ function CheckoutSteps({ current }) {
 
         return (
           <div key={step.number} className="flex items-center">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <div
-                className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${
+                className={`w-5 h-5 sm:w-6 sm:h-6 shrink-0 rounded-full flex items-center justify-center text-xs ${
                   isDone
                     ? 'bg-success text-white'
                     : isCurrent
@@ -25,15 +25,15 @@ function CheckoutSteps({ current }) {
                     : 'border border-border text-text-secondary'
                 }`}
               >
-                {isDone ? <Check size={14} /> : step.number}
+                {isDone ? <Check size={12} /> : step.number}
               </div>
-              <span className={`text-sm ${isCurrent || isDone ? 'text-text-primary' : 'text-text-secondary'}`}>
+              <span className={`text-xs sm:text-sm whitespace-nowrap ${isCurrent || isDone ? 'text-text-primary' : 'text-text-secondary'}`}>
                 {step.label}
               </span>
             </div>
 
             {index < steps.length - 1 && (
-              <div className={`w-16 h-px mx-3 ${isDone ? 'bg-success' : 'bg-border'}`} />
+              <div className={`w-3 sm:w-16 h-px mx-1.5 sm:mx-3 ${isDone ? 'bg-success' : 'bg-border'}`} />
             )}
           </div>
         )

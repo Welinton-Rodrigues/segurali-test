@@ -35,7 +35,7 @@ function CheckoutIdentificationPage() {
   const navigate = useNavigate()
 
   return (
-    <section className="px-11 py-8">
+    <section className="px-4 sm:px-11 py-8">
       <CheckoutSteps current={2} />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -73,7 +73,7 @@ function CheckoutIdentificationPage() {
                 <h3 className="text-base font-semibold text-text-primary mb-4">Adicionar novo</h3>
                 <div className="space-y-3">
                   {formFields.map((row, i) => (
-                    <div key={i} className="flex gap-3">
+                    <div key={i} className="flex flex-col sm:flex-row gap-3">
                       {row.map(field => (
                         <input
                           key={field.name}

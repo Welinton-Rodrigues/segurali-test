@@ -13,7 +13,7 @@ function CheckoutPaymentPage() {
   const navigate = useNavigate()
 
   return (
-    <section className="px-11 py-8">
+    <section className="px-4 sm:px-11 py-8">
       <CheckoutSteps current={3} />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
