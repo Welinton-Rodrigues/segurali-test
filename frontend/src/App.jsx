@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
+import BagModal from './components/layout/BagModal'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
+import BagPage from './pages/BagPage'
+import CheckoutIdentificationPage from './pages/CheckoutIdentificationPage'
 
 function App() {
   return (
@@ -13,9 +16,12 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/bag" element={<BagPage />} />
+            <Route path="/checkout/identification" element={<CheckoutIdentificationPage />} />
           </Routes>
         </main>
         <Footer />
+        <BagModal />
       </div>
     </BrowserRouter>
   )
