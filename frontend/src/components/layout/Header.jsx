@@ -5,7 +5,7 @@ import accountIcon from '../../assets/Frame.svg'
 
 function Header() {
   return (
-    <header className="bg-surface h-[106px] px-11 flex items-center justify-between">
+    <header className="bg-surface h-[106px] px-11 flex items-center justify-between border-b border-surface-alt">
       <Link to="/">
         <img src={logo} alt="BEWEAR" className="h-6" />
       </Link>
